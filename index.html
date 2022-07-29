@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>LEET 채점 및 표준점수 환산</title>
+        <meta name="description" content="LEET 채점 및 표준점수 환산" />
+        <meta name="author" content="Juan Lee <juanlee.gl@gmail.com>" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css" />
+
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/skeleton.css" />
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <div class="container" style="margin-top: 10%; margin-bottom: 10%">
+            <h1>LEET 채점</h1>
+            <label for="year">Year</label>
+            <select class="u-full-width" id="year">
+                <!-- <option value="2008">2008</option> -->
+            </select>
+
+            <div class="row">
+                <div class="one-half column">
+                    <label for="understanding">언어이해</label>
+                    <input type="text" class="u-full-width" id="understanding" placeholder="답을 순서대로 입력해주세요." />
+                </div>
+                <div class="one-half column">
+                    <label for="reasoning">추리논증</label>
+                    <input type="text" class="u-full-width" id="reasoning" placeholder="답을 순서대로 입력해주세요." />
+                </div>
+            </div>
+
+            <input class="button-primary" type="button" value="채점하기" style="font-size: 1.2em" id="grading" />
+
+            <hr />
+
+            <h3>결과 확인</h3>
+            <table class="u-full-width">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>원점수</th>
+                        <th>표준점수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>언어이해</td>
+                        <td id="uOrigin"></td>
+                        <td id="uConverted"></td>
+                    </tr>
+                    <tr>
+                        <td>추리논증</td>
+                        <td id="rOrigin"></td>
+                        <td id="rConverted"></td>
+                    </tr>
+                    <tr>
+                        <td>합산점수</td>
+                        <td id="sOrigin"></td>
+                        <td id="sConverted"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
